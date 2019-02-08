@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="container">
+            <h3 class="text-center">All Flavors</h3>
+            <div class="row">
+                <h5 class="col">Flavor</h5>
+                <h5 class="col">Base</h5>
+                <h5 class="col">Availability</h5>
+                <h5 class="col">Churn Date</h5>
+            </div>
+        {% for ice_cream in ice_cream_types %}
+            <div class="row">
+                <p class="col"> {{ ice_cream.flavor }}</p>
+                <p class="col"> {{ ice_cream.base }}</p>
+                <p class="col"> {{ ice_cream.available }}</p>
+                <p class="col"> {{ ice_cream.date_churned }}</p>
+            </div>
+        {% endfor %}
+            <div class="row">
+                <h5 class="col">Flavor</h5>
+                <h5 class="col">Base</h5>
+                <h5 class="col">Churn Date</h5>
+            </div>
+        {% for ice_cream in ice_cream_features %}
+            <div class="featured row">
+                <p class="col"> {{ ice_cream.flavor }}</p>
+                <p class="col">{{ ice_cream.base }}</p>
+                <button data-text-swap="Yesterday" class="col recently">When Was I Churned</button>
+            </div>
+        {% endfor %}
+        {% for daily in daily %}
+            <div class="daily row">
+                <p class="col"> {{ daily.flavor }}</p>
+                <p class="col">{{ daily.base }}</p>
+                <p class="col">{{ daily.date_churned }}</p>
+            </div>
+        {% endfor %}
+        {% for Weekly in weekly %}
+            <div class="weekly row">
+                <p class="col"> {{ Weekly.flavor }}</p>
+                <p class="col">{{ Weekly.base }}</p>
+                <p class="col">{{ Weekly.date_churned }}</p>
+            </div>
+        {% endfor %}
+        {% for seasonal in seasonal %}
+            <div class="seasonal row">
+                <p class="col"> {{ seasonal.flavor }}</p>
+                <p class="col">{{ seasonal.base }}</p>
+                <p class="col">{{ seasonal.date_churned }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+.featured {
+    background-color: blue;
+    color: white;
+}
+
+.daily {
+    background-color: red;
+}
+
+.weekly {
+    background-color: lightcoral;
+}
+
+.seasonal {
+    background-color: aquamarine;
+}
