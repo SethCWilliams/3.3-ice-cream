@@ -14,3 +14,7 @@
 .seasonal {
     background-color: aquamarine;
 }
+
+.hidden {
+    display: none;
+}

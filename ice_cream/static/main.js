@@ -10,5 +10,6 @@
 //     }, false);
 //
 
-
-console.log("ya work?");
+document.querySelector('button').addEventListener('click', function () {
+    document.querySelector('.churn-date').classList.toggle('hidden');
+});

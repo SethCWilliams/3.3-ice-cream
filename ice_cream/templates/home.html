@@ -27,7 +27,7 @@
             <div class="featured row">
                 <p class="col"> {{ ice_cream.flavor }}</p>
                 <p class="col">{{ ice_cream.base }}</p>
-                <p class="churn-date">{{ flavor.date_churned }}</p>
+                <p class="churn-date col hidden">{{ ice_cream.date_churned }}</p>
                 <button class="col recently">When Was I Churned</button>
             </div>
         {% endfor %}
