@@ -27,7 +27,8 @@
             <div class="featured row">
                 <p class="col"> {{ ice_cream.flavor }}</p>
                 <p class="col">{{ ice_cream.base }}</p>
-                <button data-text-swap="Yesterday" class="col recently">When Was I Churned</button>
+                <p class="churn-date">{{ flavor.date_churned }}</p>
+                <button class="col recently">When Was I Churned</button>
             </div>
         {% endfor %}
         {% for daily in daily %}
